@@ -1,6 +1,6 @@
-# Sandwich Recipe
+# Ham Sandwich Recipe
 
-Description
+A quick and easy breakfast that takes only 10 minutes.
 
 ### Ingredients
 - Bread
@@ -15,6 +15,10 @@ Description
 3. Add sauce or condiments.
 4. Put the second slice on top.
 5. Cut and serve.
+
+### Before you start
+- [x] Prepare ingredients
+- [ ] Toast the bread
 
 ![alt text](Ham_Sandwich.jpg)
 
