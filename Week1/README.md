@@ -1,6 +1,8 @@
 # Ham Sandwich Recipe
 
-A quick and easy breakfast that takes only 10 minutes.
+A quick and easy sandwich that is perfect for breakfast
+
+*Prep time: 10 minutes.*
 
 ### Ingredients
 - Bread
