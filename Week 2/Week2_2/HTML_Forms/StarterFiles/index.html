@@ -63,8 +63,15 @@
 
         <label for="lastName">Last Name:</label>
         <input type="text" id="lastname" name="lastName" required placeholder="dummy last name hint" maxlength=15>
+        <br />
+        <br />
+
+
+        <label for ="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120" required placeholder="Age"/>
       </fieldset>
 
+      <br />
       <fieldset>
         <legend>Set up user account</legend>
         <label for="email"> Email:</label>
@@ -74,7 +81,36 @@
         <input name="password" id="password" type="password" required/>
       </fieldset>
     
+      <filedset>
+        <legend>Checkbox Groups</legend>
+        <p> Check boxes allow the user to select more than one value at once.
+        </p>
+
+        <label for="pet">what pets do you have?</label><br />
+        <label><input type="checkbox" name="pet" id="pet" value="dog" />DOG</label>
+        <label><input type="checkbox" name="pet" id="pet" value="cat" />cat</label>
+        <label><input type="checkbox" name="pet" id="pet" value="bird" />bird</label>
+        <label><input type="checkbox" name="pet" id="pet" value="fish" />fish</label>
+      </filedset>
       
+      <br />
+      <br />
+
+      <filedset>
+        <legend>Dropdowns or select options</legend>
+        <select name="state" id="state">
+          <option value="AL" >Alabama</option>
+          <option value="AL" >Alaska</option>
+          <option value="AL" >Arizona</option>
+          <option value="AL" >Arkansas</option>
+        </select>
+      </filedset>
+
+      <br />
+      <br />
+      
+      <botton role="button"></botton>
+      <input name="submit" value="Submit Form" type="button" />
      </form>
 
     <p><a href="#top">Back to Top</a></p>
