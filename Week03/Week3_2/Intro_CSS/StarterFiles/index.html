@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Intro to CSS Text and Spans</title>
     <style type="text/CSS">
-      /* We write this together in class. */
+      /* We write this together in class. this is an internal style sheet*/
+
+      /* The most generic selector possible io the universal selector, 
+      use this to apply resets or super global styles to all elements on the page*/
+      * {
+        margin: 0;
+      }
+
+      p {
+        font-family: "Trebuchet MS", "Lucida Sans", Arial, sans-serif;
+      }
+
+      a {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        text-decoration: none;
+        color: #006fff;
+        text-transform: uppercase;
+      }
+
+      .silly_text {
+        font-family: fantasy;
+        font-size: 1.5rem; /* 1rem = 16px, 1.5rem = 24px */
+        color: darkorchid;
+      }
+
+      .silly_text {
+        color: chartreuse;
+      }
+
+      #important_stuff {
+        font-family: cursive;
+        font-style: italic;
+        color: red;
+      }
     </style>
   </head>
   <body>
-    <p id="important_stuff">This is important. It gets an ID.</p>
+    <p id="important_stuff"><em>This is important. It gets an ID.</em></p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis ipsum
       eu enim sagittis consectetur vel sit amet quam. Donec ac condimentum
