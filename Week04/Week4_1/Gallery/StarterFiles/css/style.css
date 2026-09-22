@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/*how we apply the custom font*/
+/*font-family: "Kaushan Script", cursive; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* add our custom fnt as the default font for the ... */
+html {
+  font-family: "Kaushan Script", cursive;
+  /* declare and use a full size image background */
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  /* this is a container for lelement we want to stack using inline block */
+  font-size: 0;
+}
+
+.polaroid {
+  width: 260px;
+  margin: 20px;
+  /* 260+20+20 = 300 */
+  display: inline-block;
+}
+
+/* descendant selector looking for a specific pattern of elements*/
+/* this targets only the images inside of a polaroid div */
+.polaroid img {
+  /* this is a common style for the image tag everywhere
+    make the image 100% width of the parent, then size the parent*/
+
+  width: 100%;
+  height: auto;
+
+  border: 10px solid #cccccc;
+  border-bottom-width: 45px;
+}
+
+.polaroid p {
+  /* 1 rem  16px, so 0.5 rem is 0px, 2rem is 32px */
+  font-size: 1rem;
+}
