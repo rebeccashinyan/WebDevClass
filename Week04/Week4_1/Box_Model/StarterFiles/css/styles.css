@@ -1,0 +1,109 @@
+/* We write this together in class. */
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #555;
+}
+
+/* every div on the page, so we can SEE our boxes while we work */
+/*div has no height until it has content or other properties*/
+div {
+  background-color: rgba(0, 0, 200, 0.1);
+}
+
+/* ---------- nav bar ---------- */
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #006fff;
+  /*when you zero out the parent of an inline-block element, 
+  don't forget to redeckare/re-assign the font size to the child element.
+  */
+  font-size: 16px;
+  /**/
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ---------- photo grid, fixed pixels ---------- */
+.gallery {
+  width: 900px;
+  margin: 0 auto;
+  padding: 10px 50px 10px 50px; /*think about the clock*/
+  font-size: 0;
+}
+
+.gallery-item {
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 200px;
+  margin: 0 10px;
+}
+
+.gallery-item-border {
+  display: inline-block;
+  font-size: 10px; /*190 + 5px border left + 5px border left = 200px*/
+  width: 190px;
+  height: 130px;
+  border: 5px solid #006fff;
+}
+
+.gallery-item-padding {
+  display: inline-block;
+  font-size: 13px;
+  width: 150px; /*150px+5px LB + 5px RB + 20px LP + 20px RP*/
+  height: 200px;
+  border: 5px solid #006fff;
+  padding: 20px;
+}
+
+.gallery-fluid {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2%;
+  font-size: 0;
+}
+
+.gallery-item-fluid {
+  display: inline-block;
+  font-size: 16px;
+  width: 21%;
+  /*height: 10%;*/
+  /*height only work if parents ...*/
+
+  height: 160px;
+  margin: 0 2%;
+  /*border: 2px solid red;*/
+}
+
+/*margin, padding, and border dimentions need to
+be adding to width when acaluclating how many fit in*/
+
+.gallery-inclass {
+  width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 0;
+}
+
+.gallery-item-inclass {
+  display: inline-block;
+  font-size: 10px;
+  width: 205px;
+  height: 205 px;
+  margin: 0;
+}
+
+/*205/4 =225px //dimension of */
