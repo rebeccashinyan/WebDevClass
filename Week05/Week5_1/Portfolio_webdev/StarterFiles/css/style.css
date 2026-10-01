@@ -1,0 +1,161 @@
+* {
+  box-sizing: border=box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "helbetica", arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: chartreuse;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+nav a:hover {
+  background-color: green;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 14rem;
+  background-color: #ccc;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero article {
+  position: absolutes;
+  bottom: 10%;
+  right: 0;
+}
+
+button,
+a.info {
+  display: inline-block;
+  width: 10rem;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+  backgroud-color: #333;
+  text-transfrom: uppercase;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+button:hover,
+a.info:hover {
+  background-color: chartreuse;
+  color: #333;
+}
+
+.containtern {
+  width: 100%;
+  display: felx;
+  flex-direction: rwo;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumb {
+  flex: 0 0 400%;
+  margin: 1.5rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* center the content  on both axis */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 1s ease;
+}
+
+.mask h2 {
+  margin: 0;
+}
+
+.mask p {
+  font-style: italic;
+}
+
+.thumb:hover .mask {
+  opacity: 1;
+}
+
+.thumb img {
+  transform: scale(1);
+  transform: rotate(0);
+  transition: all 1st ease;
+}
+
+.thumb:hover img {
+  transform: scale(1.5);
+  transform: rotate(-20deg);
+}
+
+.thumb .mask h2,
+.thumb .mask p,
+.thumgb .mask a {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (width <=1024px) {
+  .hero article {
+    width: 80%;
+  }
+
+  .thumb {
+    flex-basis: 45%;
+  }
+}
+
+/*Phone*/
+@media screen and (width <=786px) {
+  .hero article {
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+}
