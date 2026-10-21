@@ -41,6 +41,23 @@ header a {
   text-decoration: none;
 }
 
+.about-section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 10%;
+}
+
+.profile-photo {
+  width: 25%;
+  height: auto;
+}
+
+.about-text {
+  width: 55%;
+}
+
 /* mobile layout */
 @media (max-width: 768px) {
 }
