@@ -58,6 +58,25 @@ header a {
   width: 55%;
 }
 
+.skills-section {
+  padding: 4rem 10%;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-card {
+  width: 30%;
+  padding: 1.5rem;
+  background-color: #ddd;
+}
+
+.journey-section {
+  padding: 4rem 10%;
+}
 /* mobile layout */
 @media (max-width: 768px) {
 }
