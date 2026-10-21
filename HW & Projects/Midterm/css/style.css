@@ -77,6 +77,22 @@ header a {
 .journey-section {
   padding: 4rem 10%;
 }
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.timeline-card {
+  width: 30%;
+  padding: 1.5rem;
+  background-color: #ddd;
+}
+
 /* mobile layout */
 @media (max-width: 768px) {
 }
