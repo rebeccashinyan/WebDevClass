@@ -56,6 +56,10 @@ header a {
 }
 
 .skills-section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 3%;
   padding: 4rem 10%;
 }
 
@@ -63,15 +67,55 @@ header a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 90%;
+  flex-shrink: 0;
 }
 
 .skill-card {
-  width: 20rem;
-  height: 25rem;
-  padding: 1.5rem;
+  position: relative;
+  width: 31%;
+  min-height: 25rem;
+  padding: 3rem 1.5rem 1.5rem;
   background-color: #ddd;
 }
 
+.skill-card h3 {
+  position: absolute;
+  top: -0.75rem;
+  right: 0.75rem;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #203f23;
+}
+
+/* skills section title */
+.skills-label {
+  width: 7%;
+  height: 10rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2rem;
+}
+
+/* skills section title */
+.skills-label h2 {
+  width: 10rem;
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #203f23;
+  transform: rotate(90deg);
+}
+
+/* start working on journey section */
 .journey-section {
   padding: 4rem 10%;
 }
