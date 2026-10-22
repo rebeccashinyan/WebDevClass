@@ -135,6 +135,18 @@ header a {
   padding: 1.5rem;
   background-color: #ddd;
 }
+
+.project-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
 /* mobile layout */
 @media (max-width: 768px) {
 }
