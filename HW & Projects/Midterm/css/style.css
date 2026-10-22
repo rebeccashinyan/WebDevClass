@@ -130,6 +130,11 @@ header a {
   padding: 4rem 10%;
 }
 
+.project-card {
+  width: 30%;
+  padding: 1.5rem;
+  background-color: #ddd;
+}
 /* mobile layout */
 @media (max-width: 768px) {
 }
