@@ -47,8 +47,13 @@ header a {
 
 .profile-photo {
   width: 10rem;
-  height: 15rem;
-  background-color: #bbb;
+  margin-left: 10rem;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .about-text {
@@ -265,6 +270,10 @@ header a {
 
   header ul {
     gap: 1rem;
+  }
+
+  .profile-photo {
+    margin-left: 0;
   }
 
   /* place the photo above the introduction */
