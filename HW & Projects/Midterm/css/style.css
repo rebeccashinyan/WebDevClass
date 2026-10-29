@@ -121,6 +121,17 @@ header a {
   transform: rotate(90deg);
 }
 
+.company-logo {
+  display: block;
+  width: 6rem;
+  height: auto;
+  margin: 1rem 0 0 auto;
+}
+
+.bbb-logo {
+  width: 3rem;
+}
+
 /* start working on journey section */
 .journey-section {
   padding: 4rem 10%;
