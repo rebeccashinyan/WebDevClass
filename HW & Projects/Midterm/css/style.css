@@ -271,6 +271,37 @@ header a {
   align-items: center;
 }
 
+/* arrange skill icons in rows that wrap when needed. */
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tool-list li {
+  width: 27%;
+}
+
+.tool-list img {
+  display: block;
+  width: 100%;
+  max-width: 4rem;
+  height: auto;
+}
+
+/* give the wider pandas and PyTorch logos their own rows. */
+.tool-list .wide-tool {
+  width: 100%;
+}
+
+.tool-list .wide-tool img {
+  max-width: 12rem;
+}
+
 /* mobile layout */
 @media (max-width: 768px) {
   /* reduce section spacing */
