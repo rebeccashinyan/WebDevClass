@@ -21,7 +21,12 @@
   }
 
   .profile-photo {
+    width: 70%;
+    max-width: 20rem;
     margin-left: 0;
+  }
+  .floral-wall {
+    display: none;
   }
 
   /* place the photo above the introduction */
@@ -181,5 +186,17 @@
   .projects-section h2 {
     text-align: left;
     font-size: 2rem;
+  }
+
+  .contact-section {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+  }
+
+  .contact-submit {
+    width: 100%;
   }
 }

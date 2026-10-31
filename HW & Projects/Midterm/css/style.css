@@ -38,28 +38,69 @@ header a {
 }
 
 .about-section {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 8%;
   padding: 4rem 10%;
 }
 
 .profile-photo {
-  width: 10rem;
-  margin-left: 10rem;
+  position: relative;
+  width: 28%;
+  margin-left: 0;
+  flex-shrink: 0;
 }
 
-.profile-photo img {
+.intro-paper {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.about-text {
-  width: 55%;
+.portrait-photo {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 81%;
+  height: auto;
 }
 
+.about-text {
+  width: 48%;
+  max-width: 40rem;
+}
+
+.about-text h2 {
+  margin: 0 0 2.5rem;
+  font-size: 3rem;
+  color: #203f23;
+}
+
+.about-text p {
+  margin: 0 0 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.floral-wall {
+  position: absolute;
+  top: 2rem;
+  right: 10%;
+  width: 9%;
+  max-width: 8rem;
+  height: auto;
+}
+
+/* start working on skills section */
 .skills-section {
   display: flex;
   flex-direction: row-reverse;
@@ -463,4 +504,99 @@ header a {
 
 .tool-list .pytorch-tool img {
   width: 7rem;
+}
+
+/* contact page colors */
+:root {
+  --contact-bg: #f3eadd;
+  --contact-text: #203f23;
+  --contact-border: #c4c4c4;
+  --contact-white: #fff;
+  --contact-hover: #365b38;
+}
+
+.contact-section {
+  padding: 4rem 10%;
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid var(--contact-border);
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+.contact-box h2 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+.contact-intro {
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-field label {
+  font-weight: bold;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--contact-border);
+  background-color: var(--contact-white);
+  color: var(--contact-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--contact-text);
+  background-color: var(--contact-text);
+  color: var(--contact-white);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-submit:hover {
+  background-color: var(--contact-hover);
+}
+
+/* shared footer */
+.site-footer {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+}
+
+.footer-contact {
+  color: var(--contact-text);
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-footer p {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
 }
