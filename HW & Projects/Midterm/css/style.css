@@ -178,22 +178,84 @@ header a {
 .journey-section {
   padding: 4rem 10%;
 }
+/* make dates beside the experience tickets */
 .timeline {
-  margin-left: 5rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
+
 .timeline-item {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 10rem;
-  margin-bottom: 2rem;
+  justify-content: center;
   align-items: center;
+  gap: 4%;
+  margin-bottom: 4rem;
 }
 
+.timeline-item time {
+  width: 25%;
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* stretch the ticket background */
 .timeline-card {
-  width: 40%;
-  padding: 1.5rem;
-  background-color: #ddd;
+  width: 65%;
+  min-height: 11rem;
+  padding: 1.5rem 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.75rem 3%;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.kinko-ticket {
+  background-image: url("../img/decorations/kinko ticket.png");
+}
+
+.bbb-ticket {
+  background-image: url("../img/decorations/BBB ticket.png");
+}
+
+.fellows-ticket {
+  background-image: url("../img/decorations/fellows ticket.png");
+}
+
+/* keep the title on its own row*/
+.timeline-card h3 {
+  width: 100%;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* place the description and logo beside each other*/
+.timeline-card p {
+  width: 75%;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.timeline-card .company-logo {
+  display: block;
+  width: 22%;
+  max-width: 5rem;
+  height: auto;
+  margin: 0;
+}
+
+.timeline-card .bbb-logo {
+  max-width: 2.5rem;
 }
 
 .motion-section {

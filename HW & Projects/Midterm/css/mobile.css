@@ -90,6 +90,12 @@
 
   .timeline-card {
     width: 100%;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .timeline-item time {
+    width: 100%;
+    text-align: left;
   }
 
   /* stack the video columns */
