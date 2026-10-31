@@ -39,7 +39,7 @@
     max-width: 22rem;
     min-height: 25rem;
     margin: 0 auto;
-    padding: 4rem 1.5rem 2rem;
+    padding: 4.5rem 1.25rem 2rem;
   }
 
   .skill-card h3 {
@@ -107,6 +107,7 @@
   }
 
   .timeline-item time {
+    position: static;
     width: 100%;
     text-align: left;
   }
