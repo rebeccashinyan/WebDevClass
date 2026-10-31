@@ -90,12 +90,34 @@
 
   .timeline-card {
     width: 100%;
-    padding: 1.5rem 1.25rem;
+    min-height: 0;
+    padding: 1.5rem 2rem;
+  }
+
+  /* use the full text width */
+  .timeline-card p {
+    width: 100%;
+  }
+
+  /* place the logo below the description */
+  .timeline-card .company-logo {
+    position: static;
+    max-width: 6rem;
+    margin: 1rem 0 0 auto;
   }
 
   .timeline-item time {
     width: 100%;
     text-align: left;
+  }
+
+  /* hide the decorative path on small screens */
+  .stone-path {
+    display: none;
+  }
+
+  .journey-timeline {
+    padding-bottom: 0;
   }
 
   /* stack the video columns */
