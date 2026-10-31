@@ -80,14 +80,9 @@
     font-size: 2rem;
   }
 
-  /* stack the skill cards */
   .skills-grid {
     flex-direction: column;
     width: 100%;
-    gap: 2rem;
-  }
-
-  .skills-grid {
     gap: 5rem;
   }
 
@@ -146,9 +141,6 @@
 
   .journey-timeline {
     padding-bottom: 0;
-  }
-
-  .journey-timeline {
     left: 0;
   }
 
