@@ -160,6 +160,10 @@
     right: -0.5rem;
   }
 
+  .journey-extra {
+    display: none;
+  }
+
   /* stack the video columns */
   .video-grid {
     flex-direction: column;
