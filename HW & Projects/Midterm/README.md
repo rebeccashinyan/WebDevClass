@@ -13,7 +13,7 @@ The visual style is inspired by vintage European towns, incorporating elements s
 ## Image Optimization
 
 - Before optimization: 32.7 MB
-- After optimization: 20.2 MB
+- After optimization: 19.9 MB
 
-I resized oversized images and compressed the files to reduce
+I resized oversized images to reduce
 download sizes while preserving visual quality.
