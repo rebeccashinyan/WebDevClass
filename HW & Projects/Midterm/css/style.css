@@ -9,6 +9,11 @@
   --color-white: #fff;
   --color-video: #222;
   --color-placeholder: #ddd;
+  --contact-bg: var(--color-paper);
+  --contact-text: var(--color-green);
+  --contact-border: var(--color-border);
+  --contact-white: var(--color-white);
+  --contact-hover: var(--color-green-hover);
 }
 
 /* global styles */
@@ -97,8 +102,8 @@ header a {
   margin: 0 0 1.5rem;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.125rem;
-  font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.7;
+  color: #45483f;
 }
 
 .about-text p:last-child {
@@ -125,11 +130,11 @@ header a {
 
 .floral-wall {
   position: absolute;
-  top: 2rem;
-  right: 10%;
-  width: 9%;
-  max-width: 8rem;
+  top: -2.5rem;
+  right: -2.5rem;
+  width: 8rem;
   height: auto;
+  z-index: 2;
 }
 
 /* start working on skills section */
@@ -232,7 +237,7 @@ header a {
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-border);
+  color: var(--color-green);
   transform: rotate(90deg);
 }
 
@@ -410,9 +415,14 @@ header a {
 /* position the stone path*/
 .journey-timeline {
   position: relative;
+  left: 2rem;
   max-width: 60rem;
   margin: 0 auto;
   padding-bottom: 10rem;
+}
+
+.bbb-ticket {
+  left: 1.5rem;
 }
 
 .stone-path {
@@ -424,6 +434,57 @@ header a {
   transform: translateX(-55%);
   z-index: 0;
   pointer-events: none;
+}
+
+.journey-heading {
+  width: 18rem;
+  height: 7.1rem;
+  margin: 0 0 1.5rem;
+  padding: 2rem 1.25rem 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  color: #203f23;
+
+  background-image: url("../img/decorations/my journey signboard.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* shared sticker styles */
+.journey-sticker {
+  position: absolute;
+  display: block;
+  height: auto;
+  z-index: 2;
+}
+
+/* croissant: top-right of Kinko ticket */
+.croissant-sticker {
+  width: 14%;
+  max-width: 4rem;
+  top: -0.75rem;
+  right: -0.75rem;
+}
+
+/* daisy: above the Fellows ticket */
+.daisy-sticker {
+  width: 12%;
+  max-width: 4rem;
+  top: -2.75rem;
+  right: 6%;
+}
+
+/* books: bottom-right of Fellows ticket */
+.books-sticker {
+  width: 15%;
+  max-width: 5rem;
+  bottom: -1.25rem;
+  right: -1.5rem;
 }
 
 /* motion section */
@@ -689,4 +750,64 @@ header a {
 .site-footer p {
   margin: 0.75rem 0 0;
   font-size: 0.875rem;
+}
+
+/* positioning references for the stickers */
+.category-label,
+.project-card,
+.data-row {
+  position: relative;
+}
+
+/* shared sticker styles */
+.project-sticker {
+  position: absolute;
+  display: block;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* white flowers above product design */
+.project-white-flower {
+  width: 55%;
+  top: -4.5rem;
+  left: -15%;
+}
+
+/* pink flowers beside the white flowers */
+.project-pink-flower {
+  width: 45%;
+  top: -4.5rem;
+  left: 50%;
+}
+
+.project-vine-green,
+.project-vine-pink {
+  width: 28%;
+  max-width: 6rem;
+  top: 95%;
+}
+
+.project-vine-green {
+  right: 20%;
+}
+
+.project-vine-pink {
+  right: -1.5rem;
+}
+
+.project-hanging {
+  width: 14%;
+  max-width: 9rem;
+  top: -2.25rem;
+  left: 58%;
+}
+
+.data-category {
+  align-self: flex-end;
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.15;
+  text-transform: uppercase;
 }

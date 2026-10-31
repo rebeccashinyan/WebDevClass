@@ -148,6 +148,18 @@
     padding-bottom: 0;
   }
 
+  .journey-timeline {
+    left: 0;
+  }
+
+  .bbb-ticket {
+    left: 0;
+  }
+
+  .books-sticker {
+    right: -0.5rem;
+  }
+
   /* stack the video columns */
   .video-grid {
     flex-direction: column;
@@ -220,5 +232,9 @@
 
   .contact-submit {
     width: 100%;
+  }
+
+  .project-sticker {
+    display: none;
   }
 }
