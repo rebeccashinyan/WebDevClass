@@ -233,7 +233,7 @@ header a {
   width: 10rem;
   flex-shrink: 0;
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
@@ -784,6 +784,7 @@ header a {
   border: 1px solid var(--contact-border);
   background-color: var(--contact-bg);
   color: var(--contact-text);
+  position: relative;
 }
 
 .contact-box h2 {
@@ -951,4 +952,35 @@ header a {
   padding: 0.5rem;
   border: 1px solid var(--color-border);
   background-color: var(--color-paper);
+}
+
+.contact-decoration {
+  position: absolute;
+  right: -1.5rem;
+  bottom: -1.5rem;
+  width: 10rem;
+  height: 14rem;
+  pointer-events: none;
+}
+
+.contact-decoration img {
+  position: absolute;
+  display: block;
+  height: auto;
+}
+
+/* yellow flowers behind the postcards */
+.contact-flower {
+  width: 100%;
+  right: -3rem;
+  bottom: 2rem;
+  z-index: 1;
+}
+
+/* postcards in front */
+.contact-postcard {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
 }

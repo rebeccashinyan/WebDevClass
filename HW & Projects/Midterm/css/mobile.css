@@ -241,4 +241,17 @@
   .project-sticker {
     display: none;
   }
+
+  .contact-decoration {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 8rem;
+    height: 12rem;
+    margin: 1.5rem 1rem 0 auto;
+  }
+
+  .contact-flower {
+    right: -2rem;
+  }
 }
