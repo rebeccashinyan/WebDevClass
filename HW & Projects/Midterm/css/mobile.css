@@ -39,6 +39,13 @@
     width: 100%;
   }
 
+  .intro-background {
+    top: -1rem;
+    bottom: -1rem;
+    left: -0.5rem;
+    right: -0.5rem;
+  }
+
   .skill-card {
     width: 100%;
     max-width: 22rem;
@@ -78,6 +85,21 @@
     flex-direction: column;
     width: 100%;
     gap: 2rem;
+  }
+
+  .skills-grid {
+    gap: 5rem;
+  }
+
+  .bow-sticker {
+    width: 30%;
+    left: -3%;
+  }
+
+  .planner-sticker {
+    width: 62%;
+    right: 0;
+    bottom: -8%;
   }
 
   /* place each date above its experience */
