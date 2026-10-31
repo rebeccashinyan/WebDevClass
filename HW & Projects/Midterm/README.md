@@ -9,4 +9,3 @@ This portfolio is designed to help potential employers, collaborators, and anyon
 The visual style is inspired by vintage European towns, incorporating elements such as postcards, handwritten notes, botanical illustrations, vintage signs, and flowers. I wanted to create a website that feels personal, creative, and playful while reflecting my personality and design style.
 
 ![Sitemap](image.png)
-![original wireframe](image-1.png)
