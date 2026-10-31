@@ -321,7 +321,7 @@ header a {
 
 /* start working on journey section */
 .journey-section {
-  padding: 4rem 10%;
+  padding: 4rem 10% 0;
 }
 /* make dates beside the experience tickets */
 .timeline {
@@ -343,7 +343,7 @@ header a {
 
 .timeline-item time {
   position: relative;
-  right: 3rem;
+  right: 8rem;
 
   width: 25%;
   text-align: right;
@@ -427,13 +427,15 @@ header a {
 
 .stone-path {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 2%;
   left: 26%;
   height: 100%;
   width: auto;
   transform: translateX(-55%);
   z-index: 0;
   pointer-events: none;
+  margin-left: -2rem;
 }
 
 .journey-heading {
@@ -524,6 +526,8 @@ header a {
 
 /* start working on project section in project page */
 .projects-section {
+  position: relative;
+  z-index: 0;
   padding: 4rem 10%;
 }
 
@@ -558,6 +562,12 @@ header a {
   padding: 0.5rem;
   border: 1px solid var(--color-border);
   background-color: var(--color-paper);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  z-index: 2;
 }
 
 .project-image {
@@ -736,19 +746,36 @@ header a {
 .site-footer {
   padding: 2rem 1.25rem;
   text-align: center;
-  background-color: var(--contact-bg);
-  color: var(--contact-text);
+  background-color: var(--color-paper);
+  color: var(--color-green);
 }
 
-.footer-contact {
-  color: var(--contact-text);
+.site-footer h2 {
+  margin: 0 0 1rem;
   font-size: 1.25rem;
-  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--color-green);
   text-decoration: none;
 }
 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .site-footer p {
-  margin: 0.75rem 0 0;
+  margin: 1.25rem 0 0;
   font-size: 0.875rem;
 }
 
@@ -771,22 +798,23 @@ header a {
 /* white flowers above product design */
 .project-white-flower {
   width: 55%;
-  top: -4.5rem;
-  left: -15%;
+  top: -5.5rem;
+  left: 25%;
 }
 
 /* pink flowers beside the white flowers */
 .project-pink-flower {
   width: 45%;
   top: -4.5rem;
-  left: 50%;
+  left: 55%;
 }
 
 .project-vine-green,
 .project-vine-pink {
   width: 28%;
   max-width: 6rem;
-  top: 95%;
+  top: 90%;
+  z-index: -1;
 }
 
 .project-vine-green {
@@ -800,8 +828,9 @@ header a {
 .project-hanging {
   width: 14%;
   max-width: 9rem;
-  top: -2.25rem;
+  top: -4.7rem;
   left: 58%;
+  user-select: none;
 }
 
 .data-category {
