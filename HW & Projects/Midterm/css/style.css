@@ -76,24 +76,66 @@ header a {
   flex-shrink: 0;
 }
 
+/* stretch paper background to fit each card */
 .skill-card {
   position: relative;
   width: 31%;
   min-height: 25rem;
-  padding: 3rem 1.5rem 1.5rem;
-  background-color: #ddd;
+  padding: 4rem 1.5rem 2rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
-/* 3 skill titles */
+.design-card {
+  background-image: url("../img/decorations/design notes.png");
+}
+
+.build-card {
+  background-image: url("../img/decorations/build notes.png");
+}
+
+.analyze-card {
+  background-image: url("../img/decorations/analyze notes.png");
+}
+
+/* place the heading over its tape background */
 .skill-card h3 {
   position: absolute;
-  top: -0.75rem;
-  right: 0.75rem;
+  top: -1.25rem;
+  right: 4%;
+  width: 80%;
+  max-width: 13rem;
+  height: 3.5rem;
   margin: 0;
-  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
   line-height: 1;
   text-transform: uppercase;
   color: #203f23;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+/* pink tape */
+.design-card h3 {
+  background-image: url("../img/decorations/design tape.png");
+}
+
+/* beige tape*/
+.build-card h3 {
+  background-image: url("../img/decorations/analyze tape.png");
+}
+
+/* blue tape */
+.analyze-card h3 {
+  background-image: url("../img/decorations/build tape.png");
 }
 
 /* big skills section title */
@@ -303,159 +345,4 @@ header a {
 
 .tool-list .wide-tool img {
   max-width: 12rem;
-}
-
-/* mobile layout */
-@media (max-width: 768px) {
-  /* reduce section spacing */
-  .about-section,
-  .skills-section,
-  .journey-section,
-  .motion-section,
-  .projects-section {
-    padding: 2.5rem 1.25rem;
-  }
-
-  /* stack the header groups */
-  header {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-  }
-
-  header ul {
-    gap: 1rem;
-  }
-
-  .profile-photo {
-    margin-left: 0;
-  }
-
-  /* place the photo above the introduction */
-  .about-section {
-    flex-direction: column-reverse;
-    gap: 2rem;
-  }
-
-  .about-text {
-    width: 100%;
-  }
-
-  /* place the Skills heading above the cards */
-  .skills-section {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .skills-label {
-    width: 100%;
-    height: auto;
-    top: 0;
-    justify-content: flex-start;
-  }
-
-  .skills-label h2 {
-    width: auto;
-    transform: none;
-    text-align: left;
-    font-size: 2rem;
-  }
-
-  /* stack the skill cards */
-  .skills-grid {
-    flex-direction: column;
-    width: 100%;
-    gap: 2rem;
-  }
-
-  .skill-card {
-    width: 100%;
-    min-height: 0;
-    padding: 1.5rem;
-  }
-
-  .skill-card h3 {
-    position: static;
-    margin: 0 0 1rem;
-    font-size: 1.5rem;
-  }
-
-  /* place each date above its experience */
-  .timeline {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-
-  .timeline-card {
-    width: 100%;
-  }
-
-  /* stack the video columns */
-  .video-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .video-column {
-    width: 100%;
-    height: auto;
-    flex: 0 0 auto;
-    gap: 1rem;
-  }
-
-  .video-tile {
-    height: auto;
-    flex: 0 0 auto;
-  }
-
-  /* stack project categories and cards */
-  .project-row {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .project-list,
-  .data-list {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .project-card,
-  .data-list .project-card {
-    width: 100%;
-    min-height: 0;
-  }
-
-  /* return the category headings to normal orientation */
-  .category-label {
-    width: 100%;
-    height: auto;
-    justify-content: flex-start;
-  }
-
-  .product-category {
-    position: static;
-    width: auto;
-    transform: none;
-    font-size: 1.75rem;
-  }
-
-  .data-category {
-    align-self: flex-start;
-    order: -1;
-    font-size: 1.75rem;
-  }
-
-  .projects-section h2 {
-    text-align: left;
-    font-size: 2rem;
-  }
 }
