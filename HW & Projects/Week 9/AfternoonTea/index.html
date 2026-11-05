@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afternoon Tea Generator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <article class="ticket">
+      <header class="poster">
+        <p class="presents" id="presents"></p>
+        <h1 class="billing" id="billing"></h1>
+        <p class="where-when" id="where-when"></p>
+      </header>
+
+      <p class="status" id="status"></p>
+
+      <section class="lineup-wrap">
+        <h2 id="menu-heading"></h2>
+        <ul class="lineup" id="lineup"></ul>
+      </section>
+
+      <section class="order">
+        <h2 id="order-heading"></h2>
+        <p class="line" id="budget-line"></p>
+
+        <p class="total">
+          <span id="total-label"></span>
+          <strong id="total"></strong>
+        </p>
+
+        <p class="fine-print" id="fine-print"></p>
+      </section>
+    </article>
+
+    <script>
+      /* =========================================================
+     1. ARRAYS — menu choices and accent colours
+     ========================================================= */
+
+      const drinks = [
+        { name: "Latte", price: 5.5 },
+        { name: "Matcha Latte", price: 5.0 },
+        { name: "Black Tea", price: 3.5 },
+        { name: "Hot Chocolate", price: 4.5 },
+        { name: "Lemonade", price: 4.0 },
+      ];
+
+      const savories = [
+        { name: "Ham Sandwich", price: 6.0 },
+        { name: "Cheese Croissant", price: 4.5 },
+        { name: "Spinach Quiche", price: 5.5 },
+        { name: "Avocado Toast", price: 6.5 },
+      ];
+
+      const sweets = [
+        { name: "Strawberry Cake", price: 5.0 },
+        { name: "Chocolate Cookie", price: 2.5 },
+        { name: "Egg Tart", price: 3.0 },
+      ];
+
+      const accents = ["#8b4c5c", "#56734b", "#79549a", "#a35c32", "#426b80"];
+
+      /* =========================================================
+     2. RANDOM HELPER FUNCTIONS
+     ========================================================= */
+
+      function pickRandom(list) {
+        const index = Math.floor(Math.random() * list.length);
+        return list[index];
+      }
+
+      function randomBetween(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      /* =========================================================
+     3. A DIFFERENT TEA SET EVERY RELOAD
+     ========================================================= */
+
+      const drink = pickRandom(drinks);
+      const savory = pickRandom(savories);
+      const sweet = pickRandom(sweets);
+
+      const budget = randomBetween(10, 20);
+
+      /* =========================================================
+     4. CALCULATE THE TOTAL
+     Keep the result as a number until displaying it.
+     ========================================================= */
+
+      const teaTotal = drink.price + savory.price + sweet.price;
+
+      /* =========================================================
+     5. COMPARISONS, MESSAGES AND DESCRIPTION
+     ========================================================= */
+
+      // Two booleans calculated from comparisons
+      const isOverBudget = teaTotal > budget;
+      const hasRoomForExtra = budget - teaTotal >= 3;
+
+      // Three possible messages
+      let teaStatus;
+
+      if (isOverBudget) {
+        teaStatus = "Over budget — try another combination!";
+      } else if (hasRoomForExtra) {
+        teaStatus = "Within budget — room for an extra treat!";
+      } else {
+        teaStatus = "Within budget — close to your limit!";
+      }
+
+      // A ternary chooses a value
+      const budgetLabel = isOverBudget ? "Over budget" : "Within budget";
+
+      // A template literal combines three variables
+      const teaDescription = `Enjoy ${drink.name} with ${savory.name} and ${sweet.name}.`;
+
+      /* =========================================================
+     6. A FOR LOOP BUILDS THE MENU
+     ========================================================= */
+
+      const teaItems = [drink, savory, sweet];
+
+      let lineupHTML = "";
+
+      for (let i = 0; i < teaItems.length; i++) {
+        // Alternate the background on every other row
+        const stripe = i % 2 === 0 ? "stripe" : "";
+
+        lineupHTML += `
+      <li class="${stripe}">
+        <span>${teaItems[i].name}</span>
+        <span>$${teaItems[i].price.toFixed(2)}</span>
+      </li>
+    `;
+      }
+
+      /* =========================================================
+     7. DISPLAY EVERYTHING ON THE PAGE
+     ========================================================= */
+
+      document.querySelector("#presents").textContent = "Your daily pairing";
+
+      document.querySelector("#billing").textContent = "Afternoon Tea";
+
+      document.querySelector("#where-when").textContent = teaDescription;
+
+      document.querySelector("#status").textContent = teaStatus;
+
+      document.querySelector("#menu-heading").textContent = "Today's menu";
+
+      document.querySelector("#lineup").innerHTML = lineupHTML;
+
+      document.querySelector("#order-heading").textContent = "Your budget";
+
+      document.querySelector("#budget-line").textContent =
+        `Budget: $${budget.toFixed(2)}`;
+
+      document.querySelector("#total-label").textContent = "Total";
+
+      document.querySelector("#total").textContent = `$${teaTotal.toFixed(2)}`;
+
+      document.querySelector("#fine-print").textContent = budgetLabel;
+
+      /* =========================================================
+     8. A RANDOM COLOUR SCHEME
+     ========================================================= */
+
+      document.body.style.setProperty("--accent", pickRandom(accents));
+    </script>
+  </body>
+</html>
